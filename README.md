@@ -4,11 +4,7 @@ CLEAN++ is based on cclean but its improved.
 
 First of all, use these commands :
 
-`https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git`
-
-`chmod 777 cleaner.sh`
-
-`./cleaner.sh install`
+`git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd clean++ && chmod 777 cleaner.sh && ./cleaner.sh install`
 
 Second, `exit` your terminal and launch it again.
 
