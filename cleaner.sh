@@ -15,7 +15,8 @@ fi
 if grep "alias clean++='bash ~/cleaner.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/cleaner.sh &>/dev/null; then
     sleep 0.5
     mv cleaner.sh ~/
-    rm -rf CLEANER_42_IMPROVED
+    cd
+    rm -rf clean++
     echo "\033[32m -- clean++ command has been successfully installed ! Enjoy :) --\n\033[0m"
     sleep 0.5
     echo "\033[36m -- Please, run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
