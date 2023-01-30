@@ -18,36 +18,32 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
     sleep 0.5
     echo "\033[36m -- Please, run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
     sleep 0.5
-    else
-    sleep 0.5
-    echo -e "\033[31m\n -- clean++ command has NOT been installed ! :( --\n\033[0m"
-    exit 1
 fi
 exit 0
 }
 
 function cleaner () {
  
-echo "\033[0;31m     _______   _______   _  __  __    __"
-echo "\033[0;31m    / ___/ /  / __/ _ | / |/ /_/ /___/ /_"
-echo "\033[0;31m   / /__/ /__/ _// __ |/    /_  __/_  __/"
-echo "\033[0;31m   \___/____/___/_/ |_/_/|_/ /_/   /_/\033[0m"
-echo "\n\n"
-echo "\033[0;31m   Improved by : humartin\n\033[0m"
+echo -e "\033[0;31m     _______   _______   _  __  __    __"
+echo -e "\033[0;31m    / ___/ /  / __/ _ | / |/ /_/ /___/ /_"
+echo -e "\033[0;31m   / /__/ /__/ _// __ |/    /_  __/_  __/"
+echo -e "\033[0;31m   \___/____/___/_/ |_/_/|_/ /_/   /_/\033[0m"
+echo -e "\n\n"
+echo -e "\033[0;31m   Improved by : humartin\n\033[0m"
     
 Storage=$(df -h "$HOME" | grep "$HOME" | awk '{print($4)}' | tr 'i' 'B')
 if [ "$Storage" == "0BB" ];
 then
     Storage="0B"
 fi
-echo "\033[32m\n -- Available Storage Before Cleaning : || $Storage || --\033[0m"
+echo -e "\033[32m\n -- Available Storage Before Cleaning : || $Storage || --\033[0m"
 
-echo "\n\n"
-echo "\033[33m ._____________________________.\033[0m"
-echo "\033[33m |     Lancement de CCLEAN     |\033[0m"
-echo "\033[33m ._____________________________.\033[0m"
+echo -e "\n\n"
+echo -e "\033[33m ._____________________________.\033[0m"
+echo -e "\033[33m |     Lancement de CCLEAN     |\033[0m"
+echo -e "\033[33m ._____________________________.\033[0m"
 sleep 0.2
-echo "\033[31m\n -- Cleaning ...\n\033[0m "
+echo -e "\033[31m\n -- Cleaning ...\n\033[0m "
 sleep 0.5
 #42 Caches
 /bin/rm -rf "$HOME"/Library/*.42* &>/dev/null
@@ -95,13 +91,13 @@ then
     Storage="0B"
 fi
 sleep 1
-echo "\033[32m -- Available Storage After First Cleaning : || $Storage || --\n\n\033[0m"
+echo -e "\033[32m -- Available Storage After First Cleaning : || $Storage || --\n\n\033[0m"
 
-echo "\033[33m ._____________________________.\033[0m"
-echo "\033[33m |     Lancement de CLEAN++    |\033[0m"
-echo "\033[33m ._____________________________.\n\033[0m"
+echo -e "\033[33m ._____________________________.\033[0m"
+echo -e "\033[33m |     Lancement de CLEAN++    |\033[0m"
+echo -e "\033[33m ._____________________________.\n\033[0m"
 sleep 0.2
-echo "\033[31m -- Cleaning ...\n\033[0m "
+echo -e "\033[31m -- Cleaning ...\n\033[0m "
 sleep 0.5
 /bin/rm -rf ~/Downloads/* &>/dev/null
 /bin/rm -rf ~/Trash/* &>/dev/null
@@ -134,7 +130,7 @@ then
     Storage="0B"
 fi
 sleep 0.2
-echo "\033[32m -- Available Storage After Second Cleaning : || $Storage || --\n\033[0m"
+echo -e "\033[32m -- Available Storage After Second Cleaning : || $Storage || --\n\033[0m"
 }
 
 
