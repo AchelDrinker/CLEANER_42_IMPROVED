@@ -9,7 +9,7 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
     echo "\033[33m\n -- clean++ Already installed --\n\033[0m"
 fi
 if ! grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null; then
-    echo "\nalias clean++='bash ~/clean++/cleaner.sh'" >>"$shell_f"
+    echo "alias clean++='bash ~/clean++/cleaner.sh'" >>"$shell_f"
 fi
 
 if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/cleaner.sh &>/dev/null; then
