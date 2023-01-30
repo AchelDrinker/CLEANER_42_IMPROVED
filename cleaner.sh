@@ -4,19 +4,16 @@ function install () {
 shell_f=$(echo -n "$SHELL" | awk -F / '{print $3}')
 shell_f="${HOME}/.${shell_f}rc"
 
-if grep "alias clean++='bash ~/cleaner.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/cleaner.sh &>/dev/null; then
+if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/cleaner.sh &>/dev/null; then
     sleep 0.5
     echo "\033[33m\n -- clean++ Already installed --\n\033[0m"
 fi
-if ! grep "alias clean++='bash ~/cleaner.sh'" <"$shell_f" &>/dev/null; then
-    echo "\nalias clean++='bash ~/cleaner.sh'" >>"$shell_f"
+if ! grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null; then
+    echo "\nalias clean++='bash ~/clean++/cleaner.sh'" >>"$shell_f"
 fi
 
-if grep "alias clean++='bash ~/cleaner.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/cleaner.sh &>/dev/null; then
+if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/cleaner.sh &>/dev/null; then
     sleep 0.5
-    mv cleaner.sh ~/
-    cd
-    rm -rf clean++
     echo "\033[32m -- clean++ command has been successfully installed ! Enjoy :) --\n\033[0m"
     sleep 0.5
     echo "\033[36m -- Please, run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
