@@ -117,6 +117,12 @@ sleep 0.5
 /bin/rm -rf ~/Library/Application Support/discord/Code Cache/js/* &>/dev/null
 /bin/rm -rf ~/Library/Application Support/discord/Crashpad/completed/* &>/dev/null
 
+read -n1 -p "${blue}Homebrew upgrade ? (${cyan}brew upgrade${blue}) [y/${cyan}N${blue}]${reset} " input
+echo ""
+if [ -n "$input" ] && [ "$input" = "y" ]; then
+    brew upgrade ;:
+fi
+
 read -n1 -p "${blue}Cleanup Homebrew? (${cyan}brew cleanup${blue}) [y/${cyan}N${blue}]${reset} " input
 echo ""
 if [ -n "$input" ] && [ "$input" = "y" ]; then
