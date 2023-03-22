@@ -6,7 +6,6 @@ git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd 
 exit 0
 }
 
-
 function install () {
 shell_f=$(echo -n "$SHELL" | awk -F / '{print $3}')
 shell_f="${HOME}/.${shell_f}rc"
