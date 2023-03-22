@@ -2,11 +2,11 @@
 
 function info () {
 echo -e "\033[33m\n -- clean++ USAGE : --\n\033[0m"
-echo -e "\033[33m\n -- clean++ clean++ update : Update the cleaner --\n\033[0m"
-echo -e "\033[33m\n -- clean++ clean++ install : Install the cleaner if its not already installed --\n\033[0m"
-echo -e "\033[33m\n -- clean++ : launch cclean and clean++ --\n\033[0m"
-echo -e "\033[33m\n -- clean++ clean++ cclean : Launch only cclean --\n\033[0m"
-echo -e "\033[33m\n -- clean++ clean++ clean++ : Launch only clean++ --\n\033[0m"
+echo -e "\033[33m -- clean++ clean++ update : Update the cleaner --\n\033[0m"
+echo -e "\033[33m -- clean++ clean++ install : Install the cleaner if its not already installed --\n\033[0m"
+echo -e "\033[33m -- clean++ : launch cclean and clean++ --\n\033[0m"
+echo -e "\033[33m -- clean++ clean++ cclean : Launch only cclean --\n\033[0m"
+echo -e "\033[33m -- clean++ clean++ clean++ : Launch only clean++ --\n\033[0m"
 exit 0
 }
 
