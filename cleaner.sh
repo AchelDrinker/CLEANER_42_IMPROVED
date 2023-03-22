@@ -1,5 +1,12 @@
 #!/bin/bash
 
+function upgrade () {
+rm -rf "~/clean++"
+git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd clean++ && chmod 777 cleaner.sh && ./cleaner.sh install
+exit 0
+}
+
+
 function install () {
 shell_f=$(echo -n "$SHELL" | awk -F / '{print $3}')
 shell_f="${HOME}/.${shell_f}rc"
@@ -143,6 +150,10 @@ echo -e "\033[32m -- Available Storage After Second Cleaning : || $Storage || --
 if [ "$1" == "install" ];
 then
     install
+fi
+if [ "$1" == "upgrade" ];
+then
+    upgrade
 fi
 cleaner
 exit 0
