@@ -2,7 +2,7 @@
 
 function upgrade () {
 rm -rf "$HOME"/clean++
-git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd clean++ && chmod 777 cleaner.sh && ./cleaner.sh install
+cd && git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd clean++ && chmod 777 cleaner.sh && ./cleaner.sh install
 exit 0
 }
 
