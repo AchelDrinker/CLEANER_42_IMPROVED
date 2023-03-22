@@ -1,12 +1,12 @@
 #!/bin/bash
 
 function info () {
-echo "\033[33m\n -- clean++ USAGE : --\n\033[0m"
-echo "\033[33m\n -- clean++ clean++ update : Update the cleaner --\n\033[0m"
-echo "\033[33m\n -- clean++ clean++ install : Install the cleaner if its not already installed --\n\033[0m"
-echo "\033[33m\n -- clean++ : launch cclean and clean++ --\n\033[0m"
-echo "\033[33m\n -- clean++ clean++ cclean : Launch only cclean --\n\033[0m"
-echo "\033[33m\n -- clean++ clean++ clean++ : Launch only clean++ --\n\033[0m"
+echo -e "\033[33m\n -- clean++ USAGE : --\n\033[0m"
+echo -e "\033[33m\n -- clean++ clean++ update : Update the cleaner --\n\033[0m"
+echo -e "\033[33m\n -- clean++ clean++ install : Install the cleaner if its not already installed --\n\033[0m"
+echo -e "\033[33m\n -- clean++ : launch cclean and clean++ --\n\033[0m"
+echo -e "\033[33m\n -- clean++ clean++ cclean : Launch only cclean --\n\033[0m"
+echo -e "\033[33m\n -- clean++ clean++ clean++ : Launch only clean++ --\n\033[0m"
 exit 0
 }
 
@@ -35,6 +35,7 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
     echo "\033[36m -- Please, run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
     sleep 0.5
 fi
+exit 0
 }
 
 function cclean () {
@@ -106,6 +107,7 @@ then
 fi
 sleep 1
 echo -e "\033[32m -- Available Storage After Cleaning With CClean : || $Storage || --\n\n\033[0m"
+exit 0
 }
 
 
@@ -167,6 +169,7 @@ then
 fi
 sleep 0.2
 echo -e "\033[32m -- Available Storage After Cleaning With Clean++ : || $Storage || --\n\033[0m"
+exit 0
 }
 
 
@@ -286,6 +289,7 @@ then
 fi
 sleep 0.2
 echo -e "\033[32m -- Available Storage After Second Cleaning : || $Storage || --\n\033[0m"
+exit 0
 }
 
 
