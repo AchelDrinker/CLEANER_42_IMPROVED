@@ -1,12 +1,12 @@
 #!/bin/bash
 
 function info () {
-echo -e "\033[33m\n -- clean++ USAGE : --\n\033[0m"
-echo -e "\033[33m -- clean++ clean++ update : Update the cleaner --\n\033[0m"
-echo -e "\033[33m -- clean++ clean++ install : Install the cleaner if its not already installed --\n\033[0m"
+echo -e "\033[33m\n -- USAGE : --\n\033[0m"
+echo -e "\033[33m -- clean++ update : Update the cleaner --\n\033[0m"
+echo -e "\033[33m -- clean++ install : Install the cleaner if its not already installed --\n\033[0m"
 echo -e "\033[33m -- clean++ : launch cclean and clean++ --\n\033[0m"
-echo -e "\033[33m -- clean++ clean++ cclean : Launch only cclean --\n\033[0m"
-echo -e "\033[33m -- clean++ clean++ clean++ : Launch only clean++ --\n\033[0m"
+echo -e "\033[33m -- clean++ cclean : Launch only cclean --\n\033[0m"
+echo -e "\033[33m -- clean++ clean++ : Launch only clean++ --\n\033[0m"
 exit 0
 }
 
@@ -34,11 +34,7 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
     echo "\033[36m -- Please exit"
     sleep 0.5
 fi
-arg=$(echo "$PWD")
-osascript -e 'tell app "iTerm"
-    do
-        script "cd $arg && echo "\033[36m -- Please, Run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
-end tell' 
+
 
 exit 0
 }
