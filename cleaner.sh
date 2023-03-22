@@ -11,8 +11,7 @@ exit 0
 }
 
 function update () {
-rm -rf "$HOME"/clean++
-cd && git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd clean++ && chmod 777 cleaner.sh && ./cleaner.sh install
+rm -rf "$HOME"/clean++ && cd && git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd clean++ && chmod 777 cleaner.sh && ./cleaner.sh install
 exit 0
 }
 
