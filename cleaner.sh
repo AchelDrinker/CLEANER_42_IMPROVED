@@ -34,12 +34,6 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
     echo "\033[36m -- Please exit"
     sleep 0.5
 fi
-arg=$(echo "$PWD")
-osascript -e 'tell app "Terminal"
-    do
-        script "cd $arg && echo "\033[36m -- Please, Run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
-end tell' 
-
 exit 0
 }
 
