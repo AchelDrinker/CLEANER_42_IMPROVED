@@ -25,10 +25,13 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
 fi
 if ! grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null; then
     echo "alias clean++='bash ~/clean++/cleaner.sh'" >>"$shell_f"
+fi
+
+if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && ls "$HOME"/cleaner.sh &>/dev/null; then
     sleep 0.5
     echo "\033[32m -- clean++ command has been successfully installed ! Enjoy :) --\n\033[0m"
     sleep 0.5
-    echo "\033[36m -- Please exit this terminal and open a new one to use clean++. Usage : clean++ info"
+    echo "\033[36m -- Please exit"
     sleep 0.5
 fi
 exit 0
