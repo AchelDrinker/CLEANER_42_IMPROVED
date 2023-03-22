@@ -31,7 +31,7 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
     sleep 0.5
     echo "\033[32m -- clean++ command has been successfully installed ! Enjoy :) --\n\033[0m"
     sleep 0.5
-    echo "\033[36m -- Please exit"
+    echo "\033[36m -- Please exit this terminal and open a new one use clean++. Usage : clean++ info"
     sleep 0.5
 fi
 exit 0
