@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function update () {
+function info () {
 echo "\033[33m\n -- clean++ USAGE : --\n\033[0m"
 echo "\033[33m\n -- clean++ clean++ update : Update the cleaner --\n\033[0m"
 echo "\033[33m\n -- clean++ clean++ install : Install the cleaner if its not already installed --\n\033[0m"
