@@ -10,11 +10,6 @@ echo -e "\033[33m -- clean++ clean++ clean++ : Launch only clean++ --\n\033[0m"
 exit 0
 }
 
-function command (){
-cd "$1"
-echo "\033[36m -- Please, Run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
-exit 0
-}
 function update () {
 rm -rf "$HOME"/clean++ && cd && git clone https://github.com/AchelDrinker/CLEANER_42_IMPROVED.git clean++ && cd clean++ && chmod 777 cleaner.sh && ./cleaner.sh install
 exit 0
@@ -39,8 +34,10 @@ if grep "alias clean++='bash ~/clean++/cleaner.sh'" <"$shell_f" &>/dev/null && l
     echo "\033[36m -- Please exit"
     sleep 0.5
 fi
-arg = "$PWD"
-xterm -e command $arg
+arg="$PWD"
+osascript -e 'tell app "Terminal"
+    do script "cd $arg && echo "\033[36m -- Please, Run this command now : [\033[33m source $shell_f\033[0m\033[36m ] Then run [\033[33m clean++ \033[0m\033[36m]--\n\033[0m"
+end tell' 
 
 exit 0
 }
